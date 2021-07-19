@@ -75,4 +75,4 @@ hello world !
 ## 📝 License
 
 Copyright © 2021 [Tristan Guichaoua](https://github.com/tguichaoua).<br />
-This project is [MIT](https://github.com/tguichaoua/arg-parser/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/tguichaoua/arg-analyser/blob/main/LICENSE) licensed.
