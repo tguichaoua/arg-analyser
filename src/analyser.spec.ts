@@ -92,6 +92,8 @@ function fullTest(analyse: (s: string) => ArgItem[]) {
     });
 
     describe("Not closed group", () => {
+        // We use Function to match chai's throw argument type.
+        // eslint-disable-next-line @typescript-eslint/ban-types
         const test = (input: string, error: Function) => it(input, () => expect(() => analyse(input)).to.throw(error));
         test(`"You have to close the string`, NotClosedGroupError);
         test(`"You have to close the string\\"`, NotClosedGroupError);

@@ -84,7 +84,7 @@ function parseOptions(options?: Options): AnalyserData {
 
     const quotePattern = quotes.join("|");
     const leftDelimiterPattern = delimiters.map(([left]) => escapeRegex(left)).join("|");
-    const rightDelimiterPattern = delimiters.map(([_, right]) => escapeRegex(right)).join("|");
+    const rightDelimiterPattern = delimiters.map(([, right]) => escapeRegex(right)).join("|");
 
     const pattern = ["\\s+", quotePattern, leftDelimiterPattern, rightDelimiterPattern].filter(s => s.length).join("|");
 
@@ -116,6 +116,7 @@ function analyse(s: string, data: AnalyserData): ArgItem[] {
     function pushItem(delimiter: string, content: string) {
         if (!content.length) return; // ignore empty item
         // builders has at least 1 element
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         builders[builders.length - 1]!.content.push({ kind: "string", delimiter, content });
     }
 
@@ -138,6 +139,7 @@ function analyse(s: string, data: AnalyserData): ArgItem[] {
         if (!match) throw new NotClosedGroupError(index);
 
         // Extract the content and remove the escape characters
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         const content = s.slice(regex.lastIndex, match.index).replace(/\\["']/g, s => s[1]!);
         pushItem(delimiter, content);
 
@@ -162,11 +164,12 @@ function analyse(s: string, data: AnalyserData): ArgItem[] {
         pushItem("", s.slice(lastSpace, matchIndex));
 
         // builders has at least 1 element
-        const builder = builders.pop()!;
+        const builder = builders.pop()!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
         if (builder.leftDelimiter !== leftDelimiter) throw new UnexpectedCloseGroup(matchIndex);
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         builders[builders.length - 1]!.content.push({
             kind: "group",
-            delimiter: delimiterMapLeft2Tuple.get(leftDelimiter)!,
+            delimiter: delimiterMapLeft2Tuple.get(leftDelimiter)!, // eslint-disable-line @typescript-eslint/no-non-null-assertion
             content: builder.content,
         });
 
@@ -176,7 +179,7 @@ function analyse(s: string, data: AnalyserData): ArgItem[] {
     let match: RegExpExecArray | null;
     while ((match = regex.exec(s))) {
         // match[0] is always defined
-        const value = match[0]!;
+        const value = match[0]!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
         if (value.match(/\s+/)) {
             pushItem("", s.slice(lastSpace, match.index));
@@ -194,6 +197,7 @@ function analyse(s: string, data: AnalyserData): ArgItem[] {
     pushItem("", s.slice(lastSpace));
 
     if (builders.length > 1) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         throw new NotClosedGroupError(builders[builders.length - 1]!.openAt);
     }
 
