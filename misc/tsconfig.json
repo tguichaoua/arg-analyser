@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "es2019",
+        "module": "commonjs",
+
+        "lib": ["DOM"],
+
+        "esModuleInterop": true,
+
+        "strict": true,
+
+        "forceConsistentCasingInFileNames": true,
+
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+
+        "newLine": "lf",
+        "noEmitOnError": true,
+        "stripInternal": true,
+        "resolveJsonModule": true
+    }
+}

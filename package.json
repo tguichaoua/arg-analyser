@@ -1,0 +1,49 @@
+{
+    "name": "arg-analyser",
+    "version": "0.0.1",
+    "description": "",
+    "main": "dist/index.ts",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "test": "npm run lint && npm run test:build && npm run test:mocha",
+        "test:build": "tsc --noEmit",
+        "lint": "eslint ./src --ext .ts",
+        "lint:fix": "eslint ./src --ext .ts --fix",
+        "test:mocha": "mocha -r ts-node/register 'src/**/*.spec.ts'",
+        "build": "rimraf dist && tsc",
+        "prepublishOnly": "npm run build",
+        "perf": "ts-node misc/perf.ts",
+        "example": "ts-node misc/example.ts"
+    },
+    "author": {
+        "name": "Tristan Guichaoua",
+        "email": "tguichaoua.dev@gmail.com"
+    },
+    "license": "MIT",
+    "files": [
+        "dist/*"
+    ],
+    "keywords": [
+        "analyser",
+        "parser",
+        "cli"
+    ],
+    "devDependencies": {
+        "@types/chai": "^4.2.21",
+        "@types/mocha": "^8.2.3",
+        "@types/node": "^16.3.3",
+        "@typescript-eslint/eslint-plugin": "^4.28.3",
+        "@typescript-eslint/parser": "^4.28.3",
+        "chai": "^4.3.4",
+        "chalk": "^4.1.1",
+        "eslint": "^7.30.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "mocha": "^9.0.2",
+        "prettier": "^2.3.2",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.1.0",
+        "typedoc": "^0.21.4",
+        "typescript": "^4.3.5"
+    }
+}
