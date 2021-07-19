@@ -1,5 +1,17 @@
 # Arg Analyser
 
+<p>
+  <a href="https://www.npmjs.com/package/arg-analyser" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/arg-analyser.svg">
+  </a>
+  <a href="https://github.com/tguichaoua/arg-analyser/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/tguichaoua/arg-analyser/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/tguichaoua/arg-analyser" />
+  </a>
+</p>
+
 A simple configurable string analyser to get elements from command like string.
 
 -   Split the string by space
