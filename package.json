@@ -1,7 +1,7 @@
 {
     "name": "arg-analyser",
-    "version": "0.0.1",
-    "description": "",
+    "version": "0.1.0",
+    "description": "A simple configurable string analyser to get elements from command like string",
     "main": "dist/index.ts",
     "types": "dist/index.d.ts",
     "scripts": {
@@ -28,6 +28,13 @@
         "parser",
         "cli"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tguichaoua/arg-analyser.git"
+    },
+    "bugs": {
+        "url": "https://github.com/tguichaoua/arg-analyser/issues"
+    },
     "devDependencies": {
         "@types/chai": "^4.2.21",
         "@types/mocha": "^8.2.3",
