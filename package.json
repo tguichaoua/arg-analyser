@@ -2,7 +2,7 @@
     "name": "arg-analyser",
     "version": "0.1.0",
     "description": "A simple configurable string analyser to get elements from command like string",
-    "main": "dist/index.ts",
+    "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
         "test": "npm run lint && npm run test:build && npm run test:mocha",
