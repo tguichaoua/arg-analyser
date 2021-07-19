@@ -39,7 +39,7 @@ const args2 = analyser.analyse(sample);
 
 To run the example script :
 
-1. Clone this repository `git clone https://github.com/tguichaoua/arg-analyser`
+1. Clone this repository `git clone https://github.com/tguichaoua/arg-analyser.git`
 2. Enter in the directory `cd arg-analyser`
 3. Install dependencies `npm install`
 4. Run the example script `npm run example`
