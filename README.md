@@ -2,13 +2,13 @@
 
 <p>
   <a href="https://www.npmjs.com/package/arg-analyser" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/arg-analyser.svg">
+    <img alt="Version" src="https://img.shields.io/npm/v/arg-analyser.svg?style=for-the-badge" height="20">
   </a>
   <a href="https://github.com/tguichaoua/arg-analyser/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-no-lightgrey.svg?style=for-the-badge" height="20" />
   </a>
   <a href="https://github.com/tguichaoua/arg-analyser/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/tguichaoua/arg-analyser" />
+    <img alt="License: MIT" src="https://img.shields.io/github/license/tguichaoua/arg-analyser?style=for-the-badge" height="20" />
   </a>
 </p>
 
